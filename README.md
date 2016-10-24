@@ -19,6 +19,7 @@ Summay of each project:
       id of the question | a list ids of students that have involved in the question (asked, answered, commented)
       
 4. top_tags:
+
       outputs top 10 popular tags
       
       tag name | number of posts that use this tag
@@ -28,13 +29,19 @@ Summay of each project:
 Notes:
 
 1. HDFS commands:
+
    $ hadoop fs -ls <directory>
+   
    $ hadoop fs -put <local directory> <HDFS directory>
+   
    $ hadoop fs -mv <old file> <new file>
+   
    $ hadoop fs -rm <file>
 
 2. Run MapReduce:
+
    $ hadoop jar <path to jar> -mapper mapper.py -file -reducer reducer.py -file input <input dir> -output <output dir>
    
 3. Test map reduce on local machine:
+
    $ cat <test data> | ./mapper.py | sort | ./reducer.py
